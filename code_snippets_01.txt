@@ -1,0 +1,399 @@
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+
+# Now you'll write the get_title function
+# I will help you get started by providing you with the 
+# get_description function.
+def get_description(concept):
+    start_location = concept.find('DESCRIPTION:')
+    description = concept[start_location+13 :]
+    return description
+
+# This is the form that each 'concept' will come in.
+EXAMPLE_CONCEPT = """TITLE: While Loops
+DESCRIPTION: A while loop repeatedly executes the body of
+the loop until the "test condition" is no longer true."""
+
+def get_title(concept):
+    #YOUR CODE HERE
+    start_t_location = concept.find('TITLE:')
+    title = concept[start_t_location+7 :]
+    return title
+        
+
+def get_concept_by_number(text, concept_number):
+    # your code here
+    i = 1
+    target_concept = ''
+    target_title = ''
+    while i < concept_number:
+        target_concept = get_description(text)
+        target_title = get_title(text)
+        i = i+1
+    
+    #if i == concept_number:
+        return target_title
+        return target_concept
+
+
+
+
+ # Their Solution ***********************************************
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+def get_title(concept):
+    start_location = concept.find('TITLE:')
+    end_location = concept.find('DESCRIPTION:')
+    title = concept[start_location+7 : end_location-1]
+    return title
+
+def get_description(concept):
+    start_location = concept.find('DESCRIPTION:')
+    description = concept[start_location+13 :]
+    return description
+
+def get_concept_by_number(text, concept_number):
+    counter = 0
+    while counter < concept_number:
+        counter = counter + 1
+        next_concept_start = text.find('TITLE:')
+        next_concept_end   = text.find('TITLE:', next_concept_start + 1)
+        if next_concept_end >= 0:
+            concept = text[next_concept_start:next_concept_end]
+        else:
+            next_concept_end = len(text)
+            concept = text[next_concept_start:]
+        text = text[next_concept_end:]
+    return concept
+
+TEST_TEXT = """TITLE: Why Computers are Stupid
+DESCRIPTION: The phrase "computers are stupid" refers 
+to how they interpret instructions literally. This 
+means that small typos can cause big problems.
+TITLE: Python
+DESCRIPTION: Python is a "programming language." It 
+provides programmers a way to write instructions for a 
+computer to execute in a way that the computer can understand.
+TITLE: While Loops
+DESCRIPTION: A while loop repeatedly executes the body of
+the loop until the "test condition" is no longer true."""
+
+
+def generate_all_html(text):
+    current_concept_number = 1
+    concept = get_concept_by_number(text, current_concept_number)
+    all_html = ''
+    while concept != '':
+        title = get_title(concept)
+        description = get_description(concept)
+        concept_html = generate_concept_HTML(title, description)
+        all_html = all_html + concept_html
+        current_concept_number = current_concept_number + 1
+        concept = get_concept_by_number(text, current_concept_number)
+    return all_html
+
+
+print generate_all_html(TEST_TEXT)
+
+
+
+
+
+# You'll know you've solved the problem when the following code
+# prints "While Loops" and then the corresponding description.
+print get_title(EXAMPLE_CONCEPT)
+print get_description(EXAMPLE_CONCEPT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For Loop Examples
+
+
+
+print "EXAMPLE 1: We can use for loops to go through a list of strings"
+example_list_1 = ['a', 'b', 'c', 'd']
+for thing in example_list_1:
+    print thing
+    
+
+print "EXAMPLE 2: We can use for loops on nested lists too!"
+example_list_2 = [['China', 'Beijing'],
+                  ['USA'  , 'Washington D.C.'],
+                  ['India', 'Delhi']]
+for country_with_capital in example_list_2:
+    country = country_with_capital[0]
+    capital = country_with_capital[1]
+    print capital + ' is the capital of ' + country
+
+
+# ************************************ Exercise *******************************
+
+def measure_udacity(list):
+    i = 0
+    for element in list:
+        for e in element:
+            if e == 'U':
+                i = i + 1
+    return i
+
+print measure_udacity(['Dave','Sebastian','Katy'])
+#>>> 0
+
+
+print measure_udacity(['Umika','Umberto'])
+
+print measure_udacity(['Umika','Umberto', 'Roger', 'Carl', 'Uma'])
+#>>> 2
+
+
+
+
+
+
+
+
+
+# ************************************ Exercise *******************************
+
+
+def find_element(list, value):
+
+output = first thing you find in the list that == the value, else if nothing found pass out -1.
+
+
+
+I created a function that tests correctly when I manually build the test condition in --> print find_element (['flower', 'petal', 'tree', 'grass'], 'flower') <-- my function works correctly. But when I click the SUBMIT button I get the error message: "Incorrect. Your code did not find the correct index 0 for list ['flower', 'petal', 'tree', 'grass'] and element 'flower'. Your submission passed 2 out of 12 test cases."
+
+my function is:
+def find_element (list, value):
+    found_one = -1
+    for list_element in list:
+           if list_element == value:
+                found_one = list_element
+    return found_one
+
+
+
+
+# ************************************ Exercise *******************************
+
+# Given your birthday and the current date, calculate your age 
+# in days. Compensate for leap days. Assume that the birthday 
+# and current date are correct dates (and no time travel). 
+# Simply put, if you were born 1 Jan 2012 and todays date is 
+# 2 Jan 2012 you are 1 day old.
+
+daysOfMonths = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+def isLeapYear(year):
+    ##
+    # Your code here. Return True or False
+    # Pseudo code for this algorithm is found at
+    # http://en.wikipedia.org/wiki/Leap_year#Algorithm
+    ##
+     Answer = False
+     if year % 4 == 0:
+       Answer = True
+       if year % 100 == 0 and year % 400 != 0:
+           Answer = False     
+     return Answer   
+    
+    
+def howManyLeapYears(y1,y2):
+    i = y1
+    leapYearCount = 0
+    while i < y2:
+        if isLeapYear(i) == True:
+            leapYearCount = leapYearCount + 1
+        i = i + 1
+    return leapYearCount
+        
+  
+    
+    
+def daysBetweenDates(y1, m1, d1, y2, m2, d2):
+    ##
+    # Your code here.
+    ##
+    
+    birthMonthDays = ((daysOfMonths[m1-1])-d1)
+    totalYears = y2 - y1
+
+    if y2 == y1:
+        if m2 == m1:
+            days = d2 - d1
+        else:
+            days = birthMonthDays + d2 
+    else:
+        days = birthMonthDays + d2 + (365 * totalYears) + howManyLeapYears(y1,y2)
+    #print birthMonthDays
+    #print currentMonthDays
+    return days
+     
+#print howManyLeapYears(1968, 1972) 
+print daysBetweenDates (1968, 01, 26, 2015, 04, 27)
+
+24868 - 17199
+
+
+# ************************************ Exercise *******************************
+
+
+###
+### Define a simple nextDay procedure, that assumes
+### every month has 30 days.
+###
+### For example:
+###    nextDay(1999, 12, 30) => (2000, 1, 1)
+###    nextDay(2013, 1, 30) => (2013, 2, 1)
+###    nextDay(2012, 12, 30) => (2013, 1, 1)  (even though December really has 31 days)
+###
+
+def nextDay(year, month, day):
+    """
+    Returns the year, month, day of the next day.
+    Simple version: assume every month has 30 days.
+    """
+    # YOUR CODE HERE
+    newDay = day
+    newMonth = month
+    newYear = year
+    
+    if day == 30:
+        if month == 12:
+            newDay = 1
+            newMonth = 1
+            newYear = year + 1
+        else:
+            newDay = 1
+            newMonth = month + 1
+    else:
+        newDay = day + 1
+       
+    return newYear, newMonth, newDay
+
+
+print nextDay (2015, 12, 30)
+
+
+# Their Code:
+
+def nextDay(year, month, day):
+	"""Warning: This version incorrectly assumes that all months have 30 days!"""
+if day < 30:
+	return year, month, day + 1
+else:
+	if month < 12:
+		return year, month + 1, 1
+	else:
+		return year+1, 1, 1
+
+
+
+
+# ************************************ Exercise *******************************
+
+
+# This is their solution to the program that counts the number of days:
+
+
+
+def dateIsBefore(y1, m1, d1, y2, m2, d2):
+    if y1 < y2:
+        return True
+    if y2 == y2 :   
+        if m1 < m2:
+            return True
+        if  m1 == m2:   
+            if d1 < d2:
+                return True
+    return False
+
+
+def nextDay(year, month, day):
+    """Simple version: assume every month has 30 days"""
+    if day < 30:
+        return year, month, day + 1
+    else:
+        if month == 12:
+            return year + 1, 1, 1
+        else:
+            return year, month + 1, 1
+        
+def daysBetweenDates(year1, month1, day1, year2, month2, day2):
+    """Returns the number of days between year1/month1/day1
+       and year2/month2/day2. Assumes inputs are valid dates
+       in Gregorian calendar, and the first date is not after
+       the second."""
+        
+    # YOUR CODE HERE!
+    days = 0
+    while dateIsBefore(year1, month1, day1, year2, month2, day2):
+	year1, month 1, day1 = nextDay (year1, month1, day1)
+	days += 1
+    return days
+
+def test():
+    test_cases = [((2012,9,30,2012,10,30),30), 
+                  ((2012,1,1,2013,1,1),360),
+                  ((2012,9,1,2012,9,4),3)]
+    
+    for (args, answer) in test_cases:
+        result = daysBetweenDates(*args)
+        if result != answer:
+            print "Test with data:", args, "failed"
+        else:
+            print "Test case passed!"

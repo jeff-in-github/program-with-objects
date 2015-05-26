@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #000000;
+}
+
+.lesson  {
+		background-color: #6E758A;
+		font-family: Helvetica, Arial, sans-serif;
+		border-radius: 20px;
+    	padding: 10px;
+		margin: 40px;
+	
+}
+
+.TOC  {
+		
+		background-color: #494f60;
+		font-family: Helvetica, Arial, sans-serif;
+		border-radius: 20px;
+    	padding: 10px;
+		margin: 40px;
+	
+}
+
+.toc_list {
+	background-color: #6E758A;
+	padding: 4px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.topic {
+	
+	background-color: #494f60;
+	padding: 4px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+.description {
+	color: #1f1c17;
+}
+
+h1 {
+    color: #d3d8e6;
+	font-size: 40px;
+	font-weight: bold;
+  }
+  
+h2 {
+	color : #23383c;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.topic_header {
+	
+	color: #1b1e1e;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.topic_subheader {
+	
+	color: #000000;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.content_text {
+	
+	color: #000000;
+	font-size: 16px;
+}
+
+.list_stem {
+	color: #1b1e1e;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.list {
+	padding: 4px;
+    margin: 20px;
+}
+
+.published_title {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.attention {
+	font-style: italic;
+}
+
+.code_sample {
+	text-indent: 25px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 18px;
+}

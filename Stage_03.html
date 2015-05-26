@@ -1,0 +1,672 @@
+<!doctype html>
+<html>
+    <head>
+    	<link rel="stylesheet" type="text/css" href="style_02.css">
+        <meta charset="utf-8">
+        <title>Jeff's Stage 1 Notes</title>
+    </head>
+    
+    <body>
+         <!-- ***************************** TOC ************************************* -->
+        <div class="TOC">
+        	<a name="toc"></a>
+            <h1>Table of Contents</h1>
+            <div class="toc_list">
+        		<p><a class="toc_li" href="#lesson_01">Lesson 01 - HTML and Web Basics</a></p>
+            	<p><a class="toc_li" href="#lesson_02">Lesson 02 - Structure, Styling, and the Functionality of Web Pages</a></p>
+                <p><a class="toc_li" href="#lesson_03">Lesson 03 - Introduction to Python</a></p>
+                <p><a class="toc_li" href="#lesson_04">Lesson 04 - Ojbects</a></p>
+            </div>
+           
+        </div>
+        
+        
+        
+        <!-- ***************************** End TOC ********************************** -->
+        <!-- ************************* Lesson 01 ************************************ -->
+        <div class="lesson">
+        	<a name="lesson_01"></a>
+            <div>
+               	<h1>Lesson 1</h1>
+                
+                <h2>HTML and Web Basics</h2>
+                <br>
+             </div>
+                   
+        <!-- ************************* L-01 Description ***************************** -->
+            <div class="description"><b>Description:</b> Lesson 1 is about how to use HTML to set up the web page basics, sort everything out, and give it an underlying structure.</div> 
+                        
+        <!-- ************************* L-01 T-01 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header"> Components of the web</span>
+                <p class="content_text">Browser - Reads and displays HTML</p>
+                <p class="content_text">The Net - Provides connectivity</p>
+                <p class="content_text">Servers - Computers that store and send copies of HTML documents</p>
+                <p class="content_text">Transfer Protocol - The transmission method for requesting, retrieving, sending, and receiving the HTML files</p>
+            </div> 
+                    
+        <!-- ************************* L-01 T-02 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">HTML</span>
+                <p class="topic_subheader">Hypertext Markup Language</p>
+                <p class="content_text">HTML is the backbone of the web, which is really just billions of HTML documents. The tags open and close with the Greater than and Less than characters.  They have names, and attributes. The closing tag is the same as the opening, except it uses the slash switch inside the tag, right in front of the name.Void tags don't need a closing tag. Some tags have multiple attributes at the same time.</p>
+            </div>
+                    
+        <!-- ************************* L-01 T-02 S-02 ******************************* -->
+            <div class="topic">
+                <p class="topic_subheader">Inline Tags</p>
+                <p class="content_text">Anchor - Adds links to other parts of the page or to external sites.</p>
+                <p class="content_text">Break - Like a return character, just forces whatever comes after it to the next line.</p>
+                <p class="content_text">Image - A graphic, like a .png or a .jpg file.</p>
+                <p class="content_text">Span - Sets of text but adds the ability to include classes or other selectors to the middle of that line of text.</p>
+            </div>
+                    
+        <!-- ************************* L-01 T-02 S-03 ******************************* -->
+            <div class="topic">
+                <p class="topic_subheader">Block Tags</p>
+                <p class="content_text">Paragraph - Creates an invisible box</p>
+                <p class="content_text">Div - Also creates an invisible box</p>
+            </div>
+                    
+        <!-- ************************* L-01 T-02 S-04 ******************************* -->
+            <div class="topic">
+                <p class="topic_subheader">Whitespace</p> 
+                <p class="content_text">It doesn't matter how much whitespace you add when edting HTML, you cannot use the Return key or space bar to add whitespace to the HTML document just by typing it into the HTML. It always reads as just one space.</p>
+                <p class="content_text">Don't use HTML to give whitespace on the page. Instead use styling to do so.</p>
+            </div>
+            <a href="#toc" class="toc_link">Table of Contents</a>
+        </div>
+        
+       
+        <!-- *************************  End Lesson 01 ******************************* -->
+        <!-- ************************* Lesson 02 ******************************* -->
+        
+        
+        <div class="lesson">
+        	<a name="lesson_02"></a>
+            <div>
+            <h1>Lesson 2</h1>
+            <h2>Structure, Styling, and the Functionality of Web Pages</h2>
+            </div>
+         
+       <!-- ************************* L-02 Description ******************************* -->
+            <div class="description"><b>Description:</b> Lesson 2 is about how to use CSS to give it some razzle-dazzle.</div> 
+        <!-- ************************* L-02 T-01 S-01 ******************************* -->
+            
+            <div class="topic">
+                <span class="topic_header">HTML and CSS</span>
+                <div class="list">
+                    <p class="list_stem">Accronyms:</p>
+                    <ul>
+                      <li>HTML - Hypertext Markup Language</li>
+                      <li>CSS - Cascading Style Sheet</li>
+                      <li>JS - JavaScript</li>
+                      <li>DOM - Document Object Model</li>
+                    </ul>
+                </div>
+              <p class="content_text">HTML provides structure, the way blueprints define the structure of a building.</p>
+              <p class="content_text">CSS provides styling, the way interior design provides styling in the building.</p>
+              <p class="content_text">JS provides functionality and interactivity, similarly to plumbing, electrical, HVAC, etc.</p>
+            </div>
+        
+        <!-- ************************* L-02 T-02 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">HTML and Structure</span>
+                <p class="content_text">HTML uses a logical tree for structuring.</p>
+                <p class="content_text">It works from the top-down in parent / child relationships.</p>
+                <p class="topic_subheader">CSS and Styling</p>
+                <p class="content_text">CSS addresses only the styling.</p>
+                <p class="content_text">The same styling will work on multiple structures, or you can have multiple styles for the same structure.</p>
+                <p>The styling is independent of the HTML, so the CSS can be changed out at will.</p>
+            </div>
+        
+        <!-- ************************* L-02 T-03 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">The DOM</span>
+                <p class="content_text">The document object model is a set of rules for what the browser will do when it encounters HTML.</p>
+                <p class="content_text">The browser builds the DOM tree from the HTML.</p>
+                <p class="content_text">Every element (tag) in HTML is part of the tree (similar to leaves on a tree, parts of a tree, etc?).</p>
+                <div class="list">
+                    <p class="list_stem">Elements:</p>
+                    <ul>
+                      <li>Have names (types)</li>
+                      <li>Have content (content may be empty or another tag)</li>
+                      <li>Have attributes</li>
+                      <li>Attributes have values</li>
+                    </ul>
+                </div>
+            </div>
+        
+        <!-- ************************* L-02 T-04 S-01 ******************************* -->
+            <div class="topic">
+            <span class="topic_header">The Box Model</span>
+            <p> class=&quot;content_text&quot;Everything's a box. Boxes within boxes, like <span class="published_title">Inception</span>.</p>
+            <p class="content_text">Rectangles make changes easier.</p>
+            </div>
+            
+            
+         <!-- ************************* L-02 T-05 S-01 ******************************* -->
+            <div class="topic">
+            <span class="topic_header">Cascading Style Sheets</span>
+            <p class="content_text">Cascading refers to hierarchical structure, and which style will ultimately be applied if more than one are defined.</p>
+            <p class="content_text">Inheritance refers to nested elements, where elments deeper in the nest automatically get attributes assigned to them from elements higher in the nest.</p>
+            <p class="content_text">Selectors are a way to "select" which elements on the page will receive the defined styling. syntax is: <em>Selector {Attribute(s): value(s);}</em></p>
+            </div>
+            
+         <!-- ************************* L-02 T-06 S-01 ******************************* -->
+            <div class="topic">
+            <span class="topic_header">Avoid Repetition</span>
+            <p class="content_text">The Accronym DYR is a tongue-in-cheek reference to &quot;Don't Repeat Yourself.&quot;</p>
+            <p class="content_text">Keep the design as simple as possible and make use of cascading attributes, to limit the number of changes you have to make in the code. You only want a single source for any part of your code..</p>
+            <p class="content_text">Repetitive code is complicated code.</p>
+            </div>
+            <a href="#toc" class="toc_link">Table of Contents</a>
+        </div>
+   
+   
+    <!-- *************************  End Lesson 02 ******************************* -->
+     <!-- ************************* Lesson 03 ******************************* -->
+     
+     
+        <div class="lesson">
+        	<a name="lesson_03"></a>
+            <div>
+            <h1>Lesson 3</h1>
+            <h2>Python</h2>
+            </div>
+         
+       <!-- ************************* L-03 Description ******************************* -->
+            <div class="description"><b>Description:</b> Lesson 3 is an introduction to the Python programming language and its syntax. Syntax is the set of rules that describes how the code is to be interpreted, or compiled, which in turns sets requirements for how it must be written by the programmer. It is analagous to grammar rules in natural languages.</div> 
+        <!-- ************************* L-03 T-01 S-01 ******************************* -->
+            
+            <div class="topic">
+                <span class="topic_header">Introduction</span>
+                <p class="content_text">Computers are hardware that can be used for multiple purposes and the way to do different things is to write sequences of steps called programs. The computer can execute these different programs, and each program is written in different languages. The idea of a computer program is an abstracted concept that can refer to different types of things.</p>
+                <div class="list">
+                    <p class="list_stem">Examples of different types of programs:</p>
+                    <ul>
+                      <li>Web browsers</li>
+                      <li>language interpreters</li>
+                      <li>language compilers</li>
+                      <li>HTML pages</li>
+                      <li>desktop applications</li>
+                      <li>mobile applications</li>
+                    </ul>
+                </div>
+              
+              
+              <p class="content_text">We will use an interpreted language called Python.</p>
+              <p class="content_text">An interepreted language is one in which the processor "runs" the code as it is encountered. This is a little different from a compiled language in which a program is "compiled" ahead of time by a compiler. The compiler is a computer program that "translates" a code written by the programmer into a far more basic code that is closer to the computer's natural capabilities.</p>
+            </div>
+        
+        <!-- ************************* L-03 T-02 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">Basics of Programming Languages</span>
+                <p class="content_text">The first part of this stage of the course goes into the basic rules that surround computer languages, and compares computer languages to natural languages like English, Latin, Greek, Spanish, etc.</p>
+               
+                <p class="topic_subheader">Commands</p>
+                <p class="content_text">A command is an instruction that uses a convention of the programming language. The example in the tutorial is the command &quot;Print,&quot; which is a Python command that means &quot;return the results of the following.&quot; The programmer then follows the command with operational language that the command can execute.</p>
+              <p class="topic_subheader">Language Ambiguity</p>
+                <p class="content_text">Natural languages contain ambiguous meanings that humans can interepret in several different ways, and then decide which meaning would be most applicable to the logical flow of thought in the communication. In this way we can make a pretty solid guess about what a speaker probably means, and often be correct in that guess.</p>
+                <p class="topic_subheader">Forms of Grammar Notations</p>
+                <p class="content_text">Backus-Naur Form (BNF) is one example of a formal notation system for explaining the rules of a language. It can be used to describe the language rules of both natural languages and computer languages. BNF classifies the elements of a language into Non-terminal and terminal elements, and specifies where replacements can be used. It also defines the structure of an acceptable statement in the language. By placing the language elements into their proper placements as specified in the rule, sentences are formed by the author.</p>
+                
+                <p class="content_text">Computer languages need to eliminate ambiguity. Commands and other phrases in a computer language need to have one and only one meaning. Computers are not sophisticated enough to take guesses at what programmers intend, or hope the results will be.</p>
+                <p class="content_text">In Python an acceptable statement is refered to as an expression.</p>
+                
+            </div>
+        
+        <!-- ************************* L-03 T-03 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">Functions and Procedures</span>
+                <p class="content_text">A function (also called a procedure) is a way of taking input information, transforming it, and putting out the transformed result.</p>
+                <p class="content_text">The structure for a function uses the form that follows here <span class = "attention">if</span>.</p>
+            	<p class="code_sample">def &#60name of the function&#62&#40&#60input 1&#62&#60input 2&#62...&#60input n&#62&#41:</p>
+            	<p class="code_sample">&#60block of code&#62</p> 
+                <p class="code_sample">return &#40&#60output 1&#62&#60output 2&#62...&#60output n&#62&#41</p>
+                <p class="topic_subheader">The DEFINE statement</p>
+                <p class="content_text">The structure for a function uses the keyword <span class = "attention">def</span>, meaning <span class = "attention">define</span>. This is a way of defining a statement, or declaring to the interpreter that a function is being created and defined.</p>
+                <p class="topic_subheader">The RETURN statement</p>
+                <p class="content_text">Once the block of code within a function has been executed, the result of the function must be returned to the program that originally called, or directed the execution of, the function. To do this a command is issued that used the keyword <span class = "attention">return</span>. The return statement specifies whatever outputs the function was created to produce.</p>
+            </div>
+        
+        <!-- ************************* L-03 T-05 S-01 ******************************* -->
+        
+            <div class="topic">
+                <span class="topic_header">Variables and Strings</span>
+                <p class="content_text">A variable is a holding place for some data that you want to use or access. It is like a bank account, which is a holding place for money that you want to access later. The money in the account is the value, and the bank account itself is like the variable.</p>
+                <p class="content_text">A string is a type of data that contains a series of little characters or values.</p>
+            </div>
+        <!-- ************************* L-03 T-06 S-01 ******************************* -->
+            <div class="topic">
+            	<span class="topic_header">Conditions and Comparisons</span>
+            	<p>The computer can make decisions, and only perform coded instructions if certain conditions are met.</p>
+         <!--        
+            	<div class="list">
+             	 	<p class="list_stem">We'll talk about two kinds of loops:</p>
+              		<ul>
+                	<li>The While Loop</li>
+                	<li>The For Loop</li>
+             	 	</ul>
+            	</div>-->
+                
+            	<p class="topic_subheader">Comparisons</p>
+<p class="content_text">The computer can compare two things and determine whether one is greater than the other, or whether the two are equal or inequal. The types of things you compare makes a difference. If you compare two integer numbers then it is a sensible comparison to figure out which is greater, less, equal, etc. Similarly with two mathematical expressions. However comparing two different types of items, such as comparing an integer to a string, will give different results in different situations. The language surely has a set of rules for doing this, but it doesn't get covered in this level of the class. </p>
+        
+              <p class="topic_subheader">The IF statement</p>
+                <p class="content_text">The structure for a conditional test uses the keyword <span class = "attention">if</span>.</p>
+            	<p class="code_sample">if&#60condition test&#62:</p>
+            	<p class="code_sample">&#60block of code&#62</p> 
+                <p class="content_text">If the condition is met then the code contained in the block of code would be executed. If the condition is not met then the code would not be executed.</p>
+                <p class="topic_subheader">The ELSE statement</p>
+                <p class="content_text">The structure for an <span class = "attention">else</span> statement continues as an extension of the <span class = "attention">if</span> statement..</p>
+                <p class="code_sample">if&#60condition test&#62:</p>
+            	<p class="code_sample">&#60block of code&#62</p> 
+                <p class="code_sample">&#60else&#62:</p> 
+                <p class="code_sample">&#60block of alternative code&#62</p>
+                <p class="content_text">You can optionally add an else statement, with the same formatting, to the end of the if, and in the else contain code that will execute if the condition in the if statement is not met.</p>
+                 <p class="topic_subheader">The OR statement</p>
+                 <p class="content_text">The condition test can contain an <span class = "attention">or</span> statement. With the <span class = "attention">or</span> statement, you list more than one condition and if any one of the listed conditions are met, then the code is executed.</p>
+                 <p class="topic_subheader">The BREAK statement</p>
+                 <p class="content_text">The block of code executed by a conditional test can contain a <span class = "attention">break</span> statement. With the <span class = "attention">break</span> statement, the block of code stops being executed, even if the condition for executing the code is still true and the code would otherwise be executed again. This can get kludgy, the place I see the <span class = "attention">break</span> statement used most often is in troubleshooting and debugging.</p>
+            </div>
+            
+            
+      
+        <!-- ************************* L-03 T-07 S-01 ******************************* -->
+        
+        
+            <div class="topic">
+            <span class="topic_header">Loops</span>
+            <p>A loop is a construct that allows the computer to do something over and over again until the task has been repeated enough times that we don't need it peformed again. This is different from an <span class = "attention">if</span> statement because the <span class = "attention">if</span> statement executes only once (if at all). Loops can execute zero times, one time, or more than one time. </p>
+            <div class="list">
+              <p class="list_stem">We'll talk about two kinds of loops:</p>
+              <ul>
+                <li>The While Loop</li>
+                <li>The For Loop</li>
+              </ul>
+              </div>
+            <p class="topic_subheader">The WHILE Loop</p>
+            <p class="content_text">While Loops allow the computer to continue to exectue coded instructions <span class = "attention">while</span> a condition happens to be true. Once the condition is no longer true, the computer drops out of the loop and continues onward with whatever code comes afterwward.</p>
+            <p class="content_text">The structure for While loop uses the keyword <span class = "attention">while</span>.</p>
+            	<p class="code_sample">while &#60condition test&#62:</p>
+            	<p class="code_sample">&#60block of code&#62</p>
+                <p class="topic_subheader">The For Loop</p>
+            <p class="content_text"><span class = "note">Note:</span><span class = "attention">For loops are introduced later in the course, after Append, +, and len. But I'm putting my notes for it here because it's a type of loop and I want them consolidated in my notes.</span>
+            <p class="content_text"><span class = "attention">For</span> loops allow the computer to continue to exectue coded instructions <span class = "attention">for every time</span> a condition happens to be true. Once the condition is no longer true, the computer drops out of the loop and continues onward with whatever code comes afterwward.</p>
+            <p class="content_text">The structure for While loop uses the keyword <span class = "attention">while</span>.</p>
+            	<p class="code_sample">for &#60name of a variable&#62 in &#60list&#62:</p>
+            	<p class="code_sample">&#60block of code&#62</p> 
+                <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">def my_function(my_list):</p>
+            <p class="code_sample_indent_01">my_variable = 1</p>
+            <p class="code_sample_indent_01">for item in my_list:</p>
+            <p class="code_sample_indent_02">my_variable = my_variable * item</p>
+            <p class="code_sample_indent_01">return my_variable</p>  
+            </div>
+            
+            
+         <!-- ************************* L-03 T-08 S-01 ******************************* -->
+         
+         
+         
+            <div class="topic">
+            <span class="topic_header">Debugging Strategies and Techniques</span>
+            <p class="content_text">Debugging refers to finding and removing errors in the program. Developing a system for doing this is key to successful programming.</p>
+            <p class="topic_subheader">The Traceback Statement</p>
+            <p class="content_text">As a strategy, review the error messages the code gives you. <span class = "attention">Tracebacks</span> are error messages that give the programmer an idea of where the program stopped working in its execution. It also gives an error type. The message that shows the error type can then be used in searches to find solutions.</p>
+             <p class="topic_subheader">The Comment</p>
+             <p class="content_text">As a strategy, limit the amount of code you need to focus on to find the error. Using comments in your code can temporarily extract troublesome sections of code as a way of locating exactly where the error is. Use the <span class = "attention">#</span> to create a comment line so that the interpreter ignores that line of code in your program. "Comment off" sections of suspected buggy code until you "trap the bug."</p>
+             <p class="topic_subheader">Borrowed or Sample Code</p>
+             <p class="content_text">As a strategy, let others guide your way. Use code provided by other coders in your own. They've already done a lot of wor. Just ensure that their code works as you intend for it to, and ensure that it does what they say it will do.</p>
+            <p class="topic_subheader">The Print Statement</p>
+            <p class="content_text">As a strategy, find the spots where the code isn't performing as you expect. Using the print statement is a way of manually creating a trace within your program. Tracing a program is a way of finding out which lines of code work ok, and exactly where the code breaks. So if line 100 works fine, and line 102 has a problem in it, then print statements on either side of line 102 can help you locate the trouble.</p>
+            <p class="topic_subheader">Version Control</p>
+            <p class="content_text">As a strategy, compare newer versions of code to older versions known to work as intended. Save your code, and refer to older versions of it later. Comparing newer code to older code is a good way of falling back to known good versions of code if you get out too far onto a limb.</p>
+            </div>
+            
+                   
+             
+            
+         <!-- ************************* L-03 T-09 S-01 *******************************             -->
+         
+         <div class="topic">
+            <span class="topic_header">Structured Data</span>
+            <p class="content_text">We've been using strings in the past, which is one example of a structure of data. The next one to look at is the list.</p>
+           <p class="topic_subheader">Lists</p>
+            <p class="content_text">A list is similar to a string, in that it contains a series of different elements. However it is a little different in that it can contain more than just characters.</p>
+            <div class="list">
+              <p class="list_stem">Lists can contain:</p>
+              <ul>
+                <li>Strings</li>
+                <li>Numbers</li>
+                <li>Other lists</li>
+              </ul>
+           </div>
+            <p class="content_text">The syntax for creating a list uses the square brackets symbols <span class = "attention">[ ]</span>.</p> 
+            <p class="content_text">Elements inside the square brackets are separated by commas, and it's probably assigned to a variable.</p>
+            	<p class="code_sample">list_name = &#91 &#60item 00&#62,  &#60item 01&#62, ... &#60item n&#62,&#93</p>
+            	<p class="content_text">It's also possible to <span class = "attention">nest</span> lists inside one another so that you have a list of lists. to access elements inside a nested list, use a series of references.</p>
+                <div class="list">
+              <p class="list_stem">Syntax to access elements inside of lists:</p>
+              <ul>
+                <li>1st Level Deep: <span class="code_sample">return = &#91 &#60index for item in list&#62&#93</span></li>
+                <li>2nd Level Deep: <span class="code_sample">return = &#91 &#60index for item in list&#62&#93 &#91 &#60index for item in nested list&#62&#93</span></li>
+                <li>n Levels Deep: <span class="code_sample">return = &#91 &#60index for item in list&#62&#93 &#91 &#60index for item in nested list&#62&#93 &#91&#60index for item in nested, nested,...nested list&#62&#93</span></li>
+              </ul>
+              </div>
+              <p class="topic_subheader">Mutating Lists</p>
+            <p class="content_text">You can change the contents of a list, or mutate the list. Access the item in the list you want to change, and use the assignment operator to reassign that element of the list to the new value you want. This action actually changes the contents of the list, which is different from a string. with a string you cannot reassign the values of the individual positions in the string, it just isn't supported. With lists, it is. The example below would change (mutate) the list to remove <span class="attention">Larry</span> and place <span class="attention">Shemp</span> in its place:</p>
+            <p class="content_text">Example:</p>
+            <p class="code_sample">stooges = &#91 &#39Moe&#39,  &#39Larry&#39, &#39Curly&#39&#93</p>
+            <p class="code_sample">stooges = &#912&#93 = &#39Shemp&#39</p>
+            <p class="topic_subheader">Aliases</p>
+            <p class="content_text">Two different references to the same object. They use the example of James Bond and 007 are both references to the same person. Whatever state the object has affects both references. So the bad guys take away the martini, then both James Bond and 007 are affected by that. Two variable names that refer to the same object, if you change the vaul of that object, then either variable is going to see the changed state.  </p>
+            <p class="content_text">Example:</p>
+            <p class="code_sample">Bond = &#91 &#39J&#39,  &#39a&#39, &#39m&#39, &#39e&#39, &#39s&#39,&#93</p>
+            <p class="code_sample">007 = Bond</p>
+            <p class="content_text">Both of the two variables, <span class = "attention">Bond</span> and <span class = "attention">007</span> refer to the same object, a list of letters that make up our hero's first name. To mutate either of these is to mutate the other as well.</p>
+           <p class="topic_subheader">Appending Lists</p>
+            <p class="content_text">This is a method (which is like a function that's built into the language). It will add an element onto the end of something, and we'll use to mutate a list. This does NOT create a new list, but rather mutates the existing list, giving it a new element on the end. One element you can add is another list, but when append list 02 onto list 01, list 02 gets inserted <span class="attention">as a list</span>, i.e. list 02 becomes a single new element within list 01.</p>
+           <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">&#60 list 01 &#62.append(&#60 element &#62)</p>
+            <p class="code_sample">stooges = &#91 &#39Moe&#39,  &#39Larry&#39, &#39Curly&#39&#93</p>
+            <p class="code_sample">stooges.append('Shemp') --&gt; stooges = &#91 &#39Moe&#39,  &#39Larry&#39, &#39Curly&#39 , &#39Shemp&#39&#93 </p> 
+            
+            <p class="topic_subheader">+</p>
+            <p class="content_text">This is another method (which is like a function that's built into the language). It is similar to the method that concatenates strings. It does NOT mutate lists, just puts them together in output.  </p>
+            <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">&#60 list 01 &#62 + &#60 list 02 &#62</p>
+            <p class="code_sample">&#91 0 ,   1&#93 + &#91 2 , 3&#93 --&gt; This will print out &#91 0 ,   1, 2 , 3&#93</p>, but list 01 has not been altered in memory. So any subsequent print of list 01 will show it as it was before the + operator.
+            <p class="topic_subheader">Extend</p>
+            <p class="content_text">This is another method (which is like a function that's built into the language). This extends the list, and adds new stuff into the new slots in the list. This is different from appending a list onto a list (see above). In this case, each element within list 02 becomes a seperate, and new element in list 01.</p>
+           <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">&#60 list 01 &#62 += &#60 list 02 &#62<span class = "attention"> --> will return longer list 01, with new items in that list. What new items? The items contained in list 02.</span>.</p>
+            <p class="topic_subheader">len</p>
+            <p class="content_text">This is another method (which is like a function that's built into the language). It works on lots of things, not just lists. It takes an object that is a collection of thing, and it outputs the number of things (length) in the object. </p>
+           <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">len &#40&#60 list &#62&#41</p>
+            <p class="code_sample">len &#40&#91 0 &#93,  &#91 1 &#93 &#41--> <span class = "attention">will return a 2, because there are two items in that list</span>.</p>
+            <p class="topic_subheader">Index</p>
+            <p class="content_text"><span class = "note">Note:</span><span class = "attention">The index method occurs at the end of the presentation on For loops, which occurs just after Appending, +, and len. I'm placing these notes here because I want them consolidated in my notes.</span> 
+           <p class="content_text">This is another method which takes in a list and a value, then returns the first position in the list where that vaule exists. It returns an error if it does not find the value. But it isn't a &quot;total-crap-out&quot; error, it's more of a  statement that says that it did not find the value in the list.  </p>
+           <p class="content_text">Syntax Example:</p>
+            <p class="code_sample">list.index &#40&#60 value &#62&#41 </p>
+            <p class="code_sample">&nbsp;</p>
+            <p class="topic_subheader">In (and its opposite: not in)</p>
+           <p class="content_text"><span class = "note">Note:</span><span class = "attention">The in method occurs at the end of the presentation on For loops, which occures just after Appending, +, len, and Index. I'm placing these notes here because I want them consolidated in my notes.</span> 
+            <p class="content_text">In is another method. It takes in a value and returns <span class = "attention">True</span> if it finds that value in the list. It returns <span class = "attention">False</span> if it does not find the value. </p>
+            <p class="content_text">It corresponds to <span class = "attention">not in</span>, which does the opposite. If the value is not in the list, then the method returns <span class = "attention">True</span>. If the value is found in the list then it returns <span class = "attention">False</span>.</p>
+           <p class="content_text">Syntax Example (in):</p>
+           <p class="code_sample">&#60value&#62 in &#60 list &#62 </p>
+           <p class="content_text">Syntax Example (not in):</p>
+           <p class="code_sample">&#60 value &#62 not in &#60 list &#62 </p>
+           <p class="code_sample">&nbsp;</p>
+           <p class="content_text"><span class = "note">Note:</span><span class = "attention">These two statements are exactly equivalent:</span>            
+           <p class="content_text"><span class="code_sample">&#60 value &#62 not in &#60 list &#62</span> is exactly equivalent (===) to <span class="code_sample">not &#60 value &#62 in &#60 list &#62</span>
+           <p class="topic_subheader">Assert</p>
+           <p class="content_text"><span class = "note">Note:</span><span class = "attention">The assert method occurs at the end of the presentation on How to Solve Problems, which occures very near the end of the course. I'm placing these notes here because I want them consolidated in my notes.</span> 
+            <p class="content_text">Assert tests an expression, and if the expression is false then the assertion returns a fail, it stops execution of the code, and gives some sort of exception handler.</p>
+           <p class="content_text">Syntax Example (in):</p>
+           <p class="code_sample"> assert &#60 expression &#62 </p>
+           <p class="content_text">False --&gt; fail</p>
+           
+           </div>
+              
+         
+            
+            <!-- ************************* L-03 T-10 S-01 ******************************* -->
+            <div class="topic">
+            <span class="topic_header">Modular Code and Systematic Thinking</span>
+            <p>Complicated problems can be broken into smaller ones. Solve the smaller problems one at a time until the larger one becomes just a series of already-solved smaller ones.</p>
+            <p class="topic_subheader">Understanding the problem</p>
+            <p class="content_text">Come up with a concise way of describing the task. In the work session they state that they will use python to target out instances of the words <span class = "attention">title</span> and <span class = "attention">description</span>. </p>
+            
+                <p class="topic_subheader">Strategize the problem</p>
+            <p class="content_text">You want to systematically break the problem down. He looks at the inputs given, and the outputs desired. So we need to create a function that will convert the input into the desired output. This is too much to do in one bite, so we'll break it down to smller tasks.</p>
+            <p class="content_text">Let's just figure out how to do one concept. Only doing one concept should require a simpler function that one that does all of the concepts at one time.</p>
+            
+             
+            </div>
+            
+    <!-- ************************* L-03 T-11 S-01 ******************************* -->
+    
+    
+            <div class="topic">
+            <span class="topic_header">Solving Problems</span>
+            <p>Complicated problems can be broken into smaller ones. Solve the smaller problems one at a time until the larger one becomes just a series of already-solved smaller ones.</p>
+            <div class="list">
+              <p class="list_stem">The Rules for Solving Problems:</p>
+              <ul>
+                <li>Don't panic!</li>
+                <li>Find all the inputs</li>
+                <li>Figure out what the outputs will be</li>
+                <li>Find a simple mechanical solution</li>
+                <li>Develop incrementally, testing as you go</li>
+                <li>Don't worry about optimizing the code before you need to. Keep it simple & correct.</li>
+              </ul>
+              </div>
+            <p class="topic_subheader">Use Pseudocode</p>
+            <p class="content_text">Don't start writing code right away. Sketch things out and write things down in pseudocode, which is a natural language representation of the major ideas that your actual code will eventually need to be able to do in order to solve the problem.</p>
+            
+                <p class="topic_subheader">Strategize the problem</p>
+            <p class="content_text">You want to systematically break the problem down. He looks at the inputs given, and the outputs desired. So we need to create a function that will convert the input into the desired output. This is too much to do in one bite, so we'll break it down to smller tasks.</p>
+            <p class="content_text">Let's just figure out how to do one concept. Only doing one concept should require a simpler function that one that does all of the concepts at one time.</p>  
+            </div>
+            <a href="#toc" class="toc_link">Table of Contents</a>
+        </div>
+        
+    <!-- *************************  End Lesson 03 ******************************* -->
+    <!-- ****************************  Lesson 04 ******************************** -->
+    <div class="lesson">
+        	<a name="lesson_04"></a>
+            <div>
+            <h1>Lesson 4</h1>
+            <h2>Objects</h2>
+            </div>
+         
+       <!-- ************************* L-04 Description ******************************* -->
+            <div class="description"><b>Description:</b> Lesson 4 is an introduction to objects and objed oriented Programming (OOP). </div> 
+        <!-- ************************* L-04 T-01 S-01 ******************************* -->
+            
+            <div class="topic">
+                <span class="topic_header">Introduction</span>
+                <p class="content_text">OOP is a method of programming that allows us to quickly and easily refer to code that has already been developed, either by ourselves in earlier work, or by others. This ability allows programmers to leverage previously gained knowledge and save considerable time in the creation of new code.</p>
+                
+              
+             
+              <div class="list">
+              <p class="list_stem">Important Terms:</p>
+              <ul>
+                <li>Object</li>
+                <li>Class</li>
+                <li>Instance</li>
+                <li>Method</li>
+                <li>Module</li>
+                <li>Library</li>
+              </ul>
+              </div>
+              <p class="content_text">Notes make explicit, accurte connections between OOP and other things the student has learned, for example CSS Classes and HTML, which both utilize abstract thinking.</p>
+              <p class="content_text"> Notes demonstrate understanding of some of the additional topics covered previously.</p>
+              <div class="list">
+              <p class="list_stem">Additional Topics Covered Previously:</p>
+              <ul>
+                <li>Class Variables</li>
+                <li>Inheritance</li>
+                <li>Method Overriding</li>
+              </ul>
+              </div>
+              <p class="topic_subheader">Introduction to Objects</p>
+                <p class="content_text">Kunal (our instructor) goes through the prerequisites for this lession, which include <span class = "attention">loops</span> and <span class = "attention">if</span> statements.</p>
+            </div><span class = "attention">def</span>, meaning <span class = "attention">define</span>
+        
+        <!-- ************************* L-04 T-02 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">The Use of Functions</span>
+                <p class="content_text">The first part of ...</p>
+               
+                <p class="topic_subheader">The Take a Break Program</p>
+                <p class="content_text">The program for taking a break is presented as popping up a video in a browser every 2 hours or so to remind the user to &quot;take a break.&quot; To do this, Kunal writes a simple program that waits for an amount of time (we're going for two hours, but we'll test it using time periods of only a few seconds at a time), then opens a browser and plays a video embedded on youtube.</p>
+                <p class="topic_subheader">Libraries</p>
+                
+                <p class="content_text">Kunal uses two functions in Python's &quot;library&quot; of functionality. This <span class = "attention">library</span> includes lots of functions that we did not write, but we can call upon and use. A library of preexisting code can be downloaded and imported for our own use. Importantly, we don't really know how the functions work, because the details of their functionality are hidden from us.</p>
+              <p class="topic_subheader">Abstraction</p>
+                <p class="content_text">The "hiding of details" is an example of <span class = "attention">abstraction</span>. Abstraction is an advantage because, with it, we don't need to focus on anything except the code we want to produce and use. Abstraction removes the minor elements and is really only the high level information about a section of code.</p>
+                <p class="topic_subheader">Exceptions</p>
+                <p class="content_text">The <span class = "attention">exception</span> happens when a program cannot handle the situation it is working on. In the example, Kunal asks what would happen if the renaming program cannot find the file (and we've already seen that when the files were in a different folder), or when it would try to rename a file to a name that would already exist. The program isn't sophisticated enough to check for either of these in advance or make a decision about what to do in either case, so it would just throw an error and quit running.</p>
+               
+                
+            </div>
+        
+        <!-- ************************* L-04 T-03 S-01 ******************************* -->
+            <div class="topic">
+                <span class="topic_header">Using Classes</span>
+                <p class="content_text">Kunal uses the <span class = "attention">turtle</span> function from the Python library to create a square on a red screen. This is his way of introducing the concept of classes in programming. Kunal calls the <span class = "attention">turtle</span> function and gives it sets of commands that it eventually uses to draw, first a square, then a circle.</p>
+                <p class="topic_subheader">Classes</p>
+                <p class="content_text">Kunal needs to draw more than one kind of shape, but we don't want to program differently for every shape. We need code that can be used as a basic blueprint, and then be modified slightly as needed for variations. in the example <span class = "attention">turtle</span> is the class. It contains key information, but it can have different <span class = "attention">instances</span> of the blueprint.</p>
+                 <p class="content_text">Another analogy to explain classes is that it is like template. A template can be downloaded and used to create a major element of a design, but it can be modified or varied, so that multiple things can be created from the same template.</p>
+                 <p class="content_text">Yet another is the CSS version of a <span class = "attention">class</span>, which is acutally called a class. Multiple elements on an HTML page can be within that class, but those elements are different instances of it.</p>
+                 <p class="content_text">The class contains information about what it can do.</p>
+                <div class="list">
+              		<p class="list_stem">Analogies for Classes:</p>
+              			<ul>
+               				<li>Blueprints</li>
+                			<li>Templates</li>
+                			<li>CSS Classes</li>
+              			</ul>
+              	</div>
+                 <p class="content_text">&nbsp;</p>
+                <p class="topic_subheader">Instances</p>
+                <p class="content_text">While the <span class = "attention">class</span> is a general designation, the <span class = "attention">instance</span>is more specific. Once the class is created, we can call on it over and over again by creating different instances in our code. Each instance makes use of the code already created rather than recreating the same code over again each time we need a variation on the task to be completed. Instead, we create an instance for each variation.</p>
+                <p class="topic_subheader">Calling the Function inside the Class</p>
+                <p class="content_text">The class contains code within it that sets aside computer memory for the function. When we call the turtle class, we are <span class = "attention">using the function that is in it.</span> rather than just calling a function directly.</p>
+                <p class="code_sample">import &#60filename&#62 </p>
+                <p class="content_text">We can then use the code inside our program to dive into that class, and create or<span class = "attention">initialize</span> space in memory for an instance of that class.</p>
+                <p class="content_text">For example:</p>
+                <p class="code_sample">&#60variable name&#62 = &#60path&#62 . &#60class&#62 </p>
+                <p class="content_text">What that does is create space in memory (named for our variable name) that creates an instance of the class, which resides down in that path.</p>
+            </div>
+        
+        <!-- ************************* L-04 T-05 S-01 ******************************* -->
+        
+    <div class="topic">
+                <span class="topic_header">Using Classes, Continued</span>
+                <p class="content_text">Kunal uses Twilio, an imported library for Python, to continue demonstrating classes in programming.</p>
+      <p class="topic_subheader">From</p>
+                <p class="content_text">Unlike previous examples, which used the standard Python library, <span class = "attention">Twilio</span>is a libarary of functionality that <span class = "attention">does NOT</span> come standard with Python. Instead, we go to a website and download the Twilio library, which includes all sorts of additional functionality that Paython can use. In the example in the lesson, Kunal uses Twilio to send a text message to a mobile device.</p>
+                <p class="content_text">Rather than using the <span class = "attention">From</span> command that allows you to import specific attributes from a module. This means that inside of Twilio is a folder, and inside of that folder is another. We can drill down into these folders and import them as needed to find the class we need. In this case, inside <span class = "attention">Twilio</span> is a folder called <span class = "attention">rest</span>. Inside that is the class we want to call.</p>
+                
+                <p class="code_sample">from &#60real_long_path&#62 import &#60filename&#62 </p>
+                <p class="content_text">Alternatively:</p>
+                <p class="code_sample">from &#60part_of_a_path&#62 import &#60more_of_that_path&#62 </p>
+                <p class="content_text">F'rinstance (dive all the way down this path and retrieve this specifice file (or, in this case, a class.)):</p>
+                <p class="code_sample">from twilio.rest import TwilioRestClient </p>
+                <p class="content_text">~ Or (import the entire folder) ~ :</p>
+                <p class="code_sample">from twilio import rest </p>
+                <p class="content_text">In which case you can access the specific class in that folder by writing your code like this:</p>
+      <p class="code_sample">client = rest.TwilioRestClient</p>
+        <p class="content_text">What that does is create space in memory (named for our variable name) that creates an instance of the class, which resides down in that path.</p>
+                <p class="content_text">&nbsp;</p>
+                
+                	<div class = "image">
+                    <p class="topic_subheader">An Example of Two Classes Called in Different Ways:</p>
+                		<img class= "illustration" src="images/class_call.png" alt = "Examples of Calling Classes" />
+                	</div>
+                    
+               	<p class="topic_subheader">Objects</p>
+				<p>Kunal begins to describe the concept of objects, which he relates closes to instance. The instance, he goes on to say later, is basically an object. We create an object, and then use that object. By opening and using the classes, we are creating objects.</p>
+				<p>Kunal uses a program in Python that checks text for profanity to continue his explanation of classes in programming.</p>
+      </div>
+        <!-- ************************* L-04 T-06 S-01 ******************************* -->
+            <div class="topic">
+            	<span class="topic_header">Classes, Continued...Some More</span>
+            	<p>Kunal uses a program in Python that presents movie trailers to further his description of classes.</p>
+         <!--        
+            	<div class="list">
+             	 	<p class="list_stem">We'll talk about two kinds of loops:</p>
+              		<ul>
+                	<li>The While Loop</li>
+                	<li>The For Loop</li>
+             	 	</ul>
+            	</div>-->
+                
+            	<p class="topic_subheader">Creating a Class</p>
+<p class="content_text">Kunal begins creating his own class so that he can use it to create his movie web page. He notes that the Google style guide for creating Python code suggests that classes begin with a CAPITAL letter.</p>
+        
+              <p class="topic_subheader">Class Syntax</p>
+                <p class="content_text">The structure for creating a class is as follows:</p>
+            	<p class="code_sample">class &#60Name_of_class&#62 ( ):</p>
+            	<p class="content_text">We know that we'll eventually want to create multiple instances of this class, because...yeah. That's pretty much the point.</p>
+                <p class="topic_subheader">Creating the Class, Continued</p>
+                <p class="content_text">Kunal creates an instance of class <span class = "attention">Movie</span>, so he creates two python files.</p>
+                	<div class="list">
+              			<p class="list_stem">Files:</p>
+             				<ul>
+                				<li>Name: media.py - He's using this to define the class <span class = "attention">Movie</span>. </li>
+               					 <li>Name: entertainment_center.py - Saved into the same location as the media.py, and imports the content of medi.py</li>
+             		 		</ul>
+              		</div>
+                    <span class = "note">Note:</span><span class = "attention">Kunal notes that it is a best practice to define your class in one file, and to call it from a different file.</span>
+                    <p class="content_text">Kunal then uses the <span class = "attention">entertainment_center.py</span> file to create a new instance (object) of the class <span class = "attention">Movie</span>.</p>
+                <p class="code_sample">toy_story = media.Movie()</p>
+                <p class="content_text">This follows the convention of:</p>
+            	<p class="code_sample">&#60variable_name&#62 = &#60module_or_file_name.class_name&#62</p> 
+                <p class="code_sample">&#60else&#62:</p> 
+                <p class="code_sample">&#60block of alternative code&#62</p>
+                <p class="content_text">You can o....</p>
+                 <p class="topic_subheader">Constructors</p>
+                 <p class="content_text">Constructors <span class = "attention">construct</span> space in memory for the new instances (objects). The <span class = "attention">init</span> function inside any class is a constructor since it The <span class = "attention">initializes</span>, or <span class = "attention">constructs</span> space in memory for an instance (object).</p>
+                 <p class="topic_subheader">init</p>
+                 <p class="content_text">The term <span class = "attention">init</span> is a reserved word within Python. To create the init function the following syntax is used:</p>
+               <p class="code_sample">class Movie():</p> 
+                <p class="code_sample">def __init__(self, movie_title, movie_storyline, poster_image, tralier_youtube):</p> 
+                <p class="code_sample">>self.title = movie_title</p>
+                <p class="code_sample">>>>self.storyline = movie_storyline</p>
+                <p class="code_sample">>>>self.poster_image_url = poster_image</p>
+                <p class="code_sample">>>>self.trailer_youtube_url = trailer_youtube</p>
+                <p class="topic_subheader">Self</p>
+                <p class="content_text">The term <span class = "attention">self</span> is also a reserved word within Python. To create the init function the following syntax is used:</p> 
+                <p class="topic_subheader">Instance Variable</p>
+                <p class="content_text">The term <span class = "attention">instance variable</span> is a variable that is specific to the instance of the class, although it may have the same name as a corresponding variable in a differernt instance. That is to say, an instance variable is <span class = "attention">NOT</span> a global variable. However, the leading prefix <span class = "attention">self</span> keeps it from being a simple local variable. Since the prefix <span class = "attention">self</span> is there, the variable can be referenced from outside the class.</p>
+                <p class="topic_subheader">Instance Method</p>
+                <p class="content_text">The term <span class = "attention">instance method</span> refers to a function that is inside a class, and is associated with an instance. So a method is a function, but an instance method has to be defined inside a class, and an instance is associated to it. </p>
+      </div>
+            
+            
+      
+        <!-- ************************* L-04 T-07 S-01 ******************************* -->
+        
+        
+            <div class="topic">
+            <span class="topic_header">Advanced Topics</span>
+            <p>Kunal describes some more advance topics in Object Oriented Programming (OOP).</p>
+            <div class="list">
+              <p class="list_stem">Topics:</p>
+              <ul>
+                <li>Class Variables - Variables that we want all instances to share, these are defined at the class level.</li>
+                <li>Preexisting Class Variables - This is a prepackaged variable that comes baked into the Python classes. </li>
+              </ul>
+              </div>
+            <p class="topic_subheader">Class Variables</p>
+            <p class="content_text">These exist at the level of the class, and are outside the domain of any one instance, so it is different from an instance variable. Kunal uses the example of movie ratings to demonstrate an example of a class rating. All instances can use this variable because it is common to any instance. The Google style guide recommends defining class variables in all caps.</p>
+            <p class="topic_subheader">Preexisting Class Variables</p>
+            <p class="content_text">These are class variables that are predefined in Python, so you don't have to create them yourself. Examples given are <span class = "attention">__doc__</span>, <span class = "attention">__name__</span>, and <span class = "attention">__module__</span>.</p>
+            <p class="topic_subheader">Inheritance</p>
+            <p class="content_text">Inheritance allows the reuse of existing code, which is a key idea in OOP since it allows more efficient coding and time conservation. Kunal uses and example set of code involving variables named for Billy Ray and Miley Cyrus to demonstrate how the child and parent relationship works in computer science. The child reuses the code from the parent. Kunal also describes how the use of inheritance allows programmers to map the associations that exist in our brain, such as television shows and movies which are both subcategories of video.</p>
+            <p class="topic_subheader">Methods</p>
+            <p class="content_text">A method is like a routine, a function, or a functional portion of a program.</p>
+            
+              
+            </div>
+            
+            
+         
+            
+    
+     
+ </div>    
+     <!-- *************************  End Lesson 04 ******************************* -->
+    
+    
+    </body>
+</html>

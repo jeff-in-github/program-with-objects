@@ -1,0 +1,524 @@
+# ********************** Practice Set 01 *******************************
+
+# Investigating adding and appending to lists
+
+# If you run the following four lines of codes, what are list1 and list2?
+
+list1 = [1,2,3,4]
+list2 = [1,2,3,4]
+
+list1 = list1 + [9]
+list2.append(5)
+
+# to check, you can print them out using the print statements below.
+
+print "showing list1 and list2:"
+print list1
+print list2
+print 
+
+# What is the difference between these two pieces of code?
+
+def proc(mylist):
+    mylist = mylist + [6]
+
+def proc2(mylist):
+    mylist.append(6)
+
+# Can you explain the results given by the four print statements below? Remove
+# the hashes # and run the code to check.
+
+print "demonstrating proc"
+print list1
+proc(list1)
+print list1
+print
+print "demonstrating proc2"
+print list2
+proc2(list2)
+print list2
+
+# Python has a special assignment syntax: +=.  Here is an example:
+
+list3 = [1,2,3,4]
+list3 += [5]
+
+# Does this behave like list1 = list1 + [5] or list2.append(5)? Write a
+# procedure, proc3 similar to proc and proc2, but for +=. When you've done
+# that check your conclusion using the print-procedure call-print code as
+# above.
+
+
+
+def proc3(mylist):
+    list1 = mylist
+    list1 = list1 + [7,8,9]
+
+def proc4(mylist):
+    list2 = mylist
+    list2.append([7,8,9])
+    
+def proc5(mylist):
+    list3 = mylist
+    list3 += [7,8,9]    
+
+
+    
+# What happens when you try:
+
+#list1 = list1 + [7,8,9]
+#list2.append([7,8,9])
+#list3 += [7,8,9]
+list_1 = [11, 12, 13]
+list_2 = [21, 22, 23]
+list_3 = [31, 32, 33]
+
+print
+print "Here is proc3..."
+print proc3(list1)
+print
+print "Here is proc4..."
+print proc4(list2)
+print
+print "Here is proc5..."
+print proc5(list3)
+# When you've understood the difference between the three methods,
+# write a procedure list_test which takes three lists as inputs. You should
+# mutate the first input list to include 'a' as the last entry, mutate the
+# second to include the entries 'a', 'b', 'c' and finally the last list should
+# not be mutated but a copy should be returned with the additional entry 'w'.
+
+#def list_test(list_a, list_b, list_c):
+    # Your code here
+#    x = list_a
+#    y = list_b
+#    z = list_c
+    
+#    x = x + ['a']
+#    y.append(['a', 'b', 'c'])
+#    z += ['w']
+#    return x, y, z
+    
+def list_test(list_a, list_b, list_c):
+    x = list_a
+    y = list_b
+    z = list_c
+    x.append('a')
+    y += (['a', 'b', 'c'])
+    z = z + ['w']
+    return z
+
+    
+print 'list_1 is this... '
+print list_1
+print 'list_2 is this... '
+print list_2
+print 'list_3 is this... '
+print list_3
+print
+print list_test(list_1, list_2, list_3)
+print
+print 'list_1 is now this... '
+print list_1
+print 'list_2 is now this... '
+print list_2
+print 'list_3 is now this... '
+print list_3
+
+    
+    
+
+
+
+first_input = [1,2,3]
+second_input = [4,5,6]
+third_input = [7,8,9]
+print
+print 'Now for their stuff...'
+print
+print list_test(first_input, second_input, third_input)
+##>>> [7,8,9,'w']
+print first_input
+#>>> [1,2,3,'a']
+print second_input
+#>>> [4,5,6,'a','b','c']
+print third_input
+#>>> [7,8,9]
+
+
+
+# ********************** Practice Set 02 *******************************
+
+# Define a procedure, product_list,
+# that takes as input a list of numbers,
+# and returns a number that is
+# the result of multiplying all
+# those numbers together.
+
+
+def product_list(list_of_numbers):
+    mult = 1
+    for item in list_of_numbers:
+        mult = mult * item
+    return mult
+
+print product_list([5, 10, 25])
+
+
+# ********************** Practice Set 03 *******************************
+# Define a procedure, greatest,
+# that takes as input a list
+# of positive numbers, and
+# returns the greatest number
+# in that list. If the input
+# list is empty, the output
+# should be 0.
+
+
+def product_list(list_of_numbers):
+    mult = 1
+    for item in list_of_numbers:
+        mult = mult * item
+    return mult        
+            
+    
+
+print product_list([9])
+#>>> 9
+
+print product_list([1,2,3,4])
+#>>> 24
+
+
+# ********************** Practice Set 04 *******************************
+# In this problem, you will reuse some of the code from the 
+# previous work session to make a new function that creates 
+# HTML from a list whose entries are a title and a description.
+
+# This is the "generate_concept_HTML" function 
+# from the previous work_session. You don't need to modify it 
+# (though you are welcome to change it to accomodate whatever
+# HTML structure you are using).
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+# This is an example of what a concept would look like as a list.
+EXAMPLE_CONCEPT = ["Python", "Python is a programming language"]
+
+# This is the function you will complete
+def make_HTML(concept):
+    # ADD YOUR CODE HERE
+    # your code should assign values to two variables 
+    # (title and description) so that the call to 
+    # generate_concept_HTML below works as expected.
+    title = 'Python'
+    description = 'Python is a programming language'
+    return generate_concept_HTML(title, description)
+
+print make_HTML(EXAMPLE_CONCEPT)
+# The previous line of code should print:
+"""
+<div class="concept">
+    <div class="concept-title">
+        Python
+    </div>
+    <div class="concept-description">
+        Python is a programming language
+    </div>
+</div>
+"""
+
+
+# ********************** Practice Set 05 *******************************
+
+# Now you will write code for a function called 
+# make_HTML_for_many_concepts. This function will take a list 
+# of concepts (each of which is itself a list) and will return
+# the appropriate string of HTML. 
+#
+# NOTE: You may want to call the make_HTML(concept) function
+# which you defined in the previous exercise.
+#
+# This is the "generate_concept_HTML" function 
+# from the previous work_session. You do not need to modify it.
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+# This is one way you may have written make_HTML.
+# You do not need to modify it.
+def make_HTML(concept):
+    concept_title = concept[0]
+    concept_description = concept[1]
+    return generate_concept_HTML(concept_title, concept_description)
+
+# This is an example of what a list of concepts might look like.
+EXAMPLE_LIST_OF_CONCEPTS = [ ['Python', 'Python is a Programming Language'],
+                             ['For Loop', 'For Loops allow you to iterate over lists'],
+                             ['Lists', 'Lists are sequences of data'] ]
+
+/# This is the function you will write. <------------------------------This was my initial attempt (jb5549)
+/def make_HTML_for_many_concepts(list_of_concepts):
+/    # write code here that generates the appropriate HTML
+/    # for a list of concepts.
+/    place_holder = []
+/    for item in list_of_concepts:
+/        place_holder = item
+/        print make_HTML(place_holder)
+
+
+
+/def make_HTML_for_many_concepts(list_of_concepts): <------------------------------Solution
+/    HTML = ""
+/    for concept in list_of_concepts:
+/        concept_HTML = make_HTML(concept)
+/        HTML = HTML + concept_HTML
+/    return HTML
+
+
+def make_HTML_for_many_concepts(list_of_concepts): <------------------------------My revised version of the solution (jb5549)
+    place_holder = ""
+    for item in list_of_concepts:
+        my_HTML_container = make_HTML(item)
+        place_holder = place_holder + my_HTML_container
+    return place_holder
+
+
+
+print make_HTML_for_many_concepts(EXAMPLE_LIST_OF_CONCEPTS)
+# The previous line of code should print the following
+"""
+<div class="concept">
+    <div class="concept-title">
+        Python
+    </div>
+    <div class="concept-description">
+        Python is a Programming Language
+    </div>
+</div>
+<div class="concept">
+    <div class="concept-title">
+        For Loop
+    </div>
+    <div class="concept-description">
+        For Loops allow you to iterate over lists
+    </div>
+</div>
+<div class="concept">
+    <div class="concept-title">
+        Lists
+    </div>
+    <div class="concept-description">
+        Lists are sequences of data
+    </div>
+</div>
+"""
+
+
+
+
+
+# ********************** Turn in this Python code at the end of Stage 2 Work Session 5 *******************************
+
+
+
+
+
+
+# *********************************************************************************************************************
+# *********************** Below is the Python code I created / used in Work Session 4 *********************************
+# *********************************************************************************************************************
+
+
+
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+def get_title(concept):
+    start_location = concept.find('TITLE:')
+    end_location = concept.find('DESCRIPTION:')
+    title = concept[start_location+7 : end_location-1]
+    return title
+
+def get_description(concept):
+    start_location = concept.find('DESCRIPTION:')
+    description = concept[start_location+13 :]
+    return description
+
+def get_concept_by_number(text, concept_number):
+    counter = 0
+    while counter < concept_number:
+        counter = counter + 1
+        next_concept_start = text.find('TITLE:')
+        next_concept_end   = text.find('TITLE:', next_concept_start + 1)
+        if next_concept_end >= 0:
+            concept = text[next_concept_start:next_concept_end]
+        else:
+            next_concept_end = len(text)
+            concept = text[next_concept_start:]
+        text = text[next_concept_end:]
+    return concept
+
+# ******************************************************* This is the text we used to text the program above ************
+
+
+TEST_TEXT = """TITLE: Why Computers are Stupid
+DESCRIPTION: The phrase "computers are stupid" refers 
+to how they interpret instructions literally. This 
+means that small typos can cause big problems.
+TITLE: Python
+DESCRIPTION: Python is a "programming language." It 
+provides programmers a way to write instructions for a 
+computer to execute in a way that the computer can understand.
+TITLE: While Loops
+DESCRIPTION: A while loop repeatedly executes the body of
+the loop until the "test condition" is no longer true."""
+
+
+# ******************************************************* That was the text we used to text the program above ************
+
+
+def generate_all_html(text):
+    current_concept_number = 1
+    concept = get_concept_by_number(text, current_concept_number)
+    all_html = ''
+    while concept != '':
+        title = get_title(concept)
+        description = get_description(concept)
+        concept_html = generate_concept_HTML(title, description)
+        all_html = all_html + concept_html
+        current_concept_number = current_concept_number + 1
+        concept = get_concept_by_number(text, current_concept_number)
+    return all_html
+
+
+print generate_all_html(TEST_TEXT)
+
+
+
+
+
+
+
+
+
+# *********************************************************************************************************************
+# *********************** Below is the Python code I created / used in Work Session 5 *********************************
+# *********************************************************************************************************************
+
+
+
+# This is the "generate_concept_HTML" function from work_session(s) 4 & 5. 
+def generate_concept_HTML(concept_title, concept_description):
+    html_text_1 = '''
+<div class="concept">
+    <div class="concept-title">
+        ''' + concept_title
+    html_text_2 = '''
+    </div>
+    <div class="concept-description">
+        ''' + concept_description
+    html_text_3 = '''
+    </div>
+</div>'''
+    
+    full_html_text = html_text_1 + html_text_2 + html_text_3
+    return full_html_text
+
+
+
+
+
+
+def make_HTML(concept):
+    title = concept[0]
+    description = concept[1]
+    return generate_concept_HTML(concept_title, concept_description)
+
+# This is an example of what a list of concepts might look like.
+#EXAMPLE_LIST_OF_CONCEPTS = [ ['Python', 'Python is a Programming Language'],
+#                             ['For Loop', 'For Loops allow you to iterate over lists'],
+#                             ['Lists', 'Lists are sequences of data'] ]
+#
+
+
+
+
+def make_HTML_for_many_concepts(list_of_concepts):
+    place_holder = ""
+    for item in list_of_concepts:
+        my_HTML_container = make_HTML(item)
+        place_holder = place_holder + my_HTML_container
+    return place_holder
+
+
+
+
+
+print make_HTML_for_many_concepts(EXAMPLE_LIST_OF_CONCEPTS)
+# The previous line of code should print the following
+"""
+<div class="concept">
+     <div class="concept-title">
+         Python
+     </div>
+    <div class="concept-description">
+        Python is a Programming Language
+    </div>
+</div>
+<div class="concept">
+    <div class="concept-title">
+        For Loop
+    </div>
+    <div class="concept-description">
+        For Loops allow you to iterate over lists
+    </div>
+</div>
+<div class="concept">
+    <div class="concept-title">
+        Lists
+    </div>
+    <div class="concept-description">
+        Lists are sequences of data
+    </div>
+</div>
+"""
+
